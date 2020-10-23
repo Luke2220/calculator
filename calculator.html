@@ -1,0 +1,109 @@
+<style>
+
+body{
+    margin-top: 300px;
+    
+}
+
+#digitcontainer
+{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: .5em .5em;
+    margin-left:775;
+    margin-right:700px;
+    
+  
+}
+
+#operatercontainer{
+    grid-column-start: 4;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+   height:100px;
+    
+
+    float:right;
+
+}
+
+#display{
+    border:2px solid steelblue;
+    margin-left:700px;
+    margin-right:700px;
+    box-shadow:1px 1px;
+}
+
+.digits{
+    color:black;
+    background-color: turquoise;
+    border-color: turquoise;
+    box-shadow:1px 1px;      
+}
+
+#operaterflex{
+    display:flex;
+    flex-direction: column;
+    height:120px;
+    width:50%;
+    
+}
+
+.operaterStyle
+{
+    color:black;
+    background-color:rgb(157, 127, 196);
+    border-color: rgb(157, 127, 196);
+    box-shadow:1px 1px;
+    height:3em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+</style>
+<html>
+    
+
+    <body>
+
+        <div>
+            <div>
+                <p id='display'>0</p>
+            </div>
+            <div id='digitcontainer'>
+                <button class='digits'>1</button>
+                <button class='digits'>2</button>
+                <button class='digits'>3</button>
+                <button class='digits'>4</button>
+                <button class='digits'>5</button>
+                <button class='digits'>6</button>
+                <button class='digits'>7</button>
+                <button class='digits'>8</button>
+                <button class='digits'>9</button>
+                <button class='digits'>0</button>
+                <button class='digits'>.</button>
+
+                <div id='operatercontainer'>
+                    <div id='operaterflex'>                    
+                    <button class='operators operaterStyle'>+</button>
+                    <button class='operators operaterStyle'>-</button>
+                    <button class='operators operaterStyle'>*</button>
+                    <button class='operators operaterStyle'>/</button>
+                    <button id='operateBtn' class='operaterStyle'>=</button>
+                    <button id='clearBtn' class='operaterStyle'>Clear</button>
+                    <button id='undoBtn' class='operaterStyle'>Back</button>
+                </div>
+                </div>
+
+            </div>
+          
+        </div>
+
+      
+     
+    </body>
+    <script src="calculator.js"></script>
+</html>
